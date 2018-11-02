@@ -34,6 +34,16 @@
 		}
 		
 		
+		public static function get($key)
+		{
+			if (!self::$instance)
+			{
+				self::Connect();
+			}
+			$key = self::PREFIX . $key;
+			return self::$instance->get($key);
+		}		
+		
 		
 		public static function set($key, $value, $time = 60)
 		{
