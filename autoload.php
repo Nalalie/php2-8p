@@ -1,5 +1,5 @@
 <?php
-//подключаем автозагрузчик twig и запускаем статический метод aregister
+//подключаем twig и запускаем статический метод aregister
 require_once 'lib/Twig/Autoloader.php'; 
 Twig_Autoloader::register();
 
