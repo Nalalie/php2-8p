@@ -1,0 +1,25 @@
+        <div class="menu">
+            <p>Menu</p>
+            <ul>
+                <li><a href="{{ domain }}">Главная</a></li>
+                <li><a href="{{ domain }}catalog/">Каталог</a></li>
+                <li><a href="{{ domain }}article/">Статьи</a></li>                
+                <li><a href="{{ domain }}contact/">Контакты</a></li>
+                <li><a href="{{ domain }}galery/">Фотогаллерея</a></li>
+            </ul>
+        </div>
+        
+        <div class="open">
+        <div id="autorize">
+            {% include 'auth.html' %}
+        </div>
+        <br>
+        <div class="basket" id="basket">
+        <p>Наименований товаров в корзине: <span id="basket_count_good">{{ basket.basket_count_good }}</span><br>
+        Всего товаров: <span id="basket_count">{{ basket.basket_count }}</span><br>
+        на сумму: <span id="basket_price">{{ basket.basket_price }}</span> рубль</p>
+		<a href="{{ domain }}basket/">Ваша корзина</a></li>	<br>
+        <input type="button" id="clear_basket"  value="Очистить корзину" onclick="clear_basket()"></center>
+        </div>        
+        </div>
+        
