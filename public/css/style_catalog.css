@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tovar_catalog {
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
+	margin: 5px auto;
+}
+
+.tovar_catalog a
+{
+	text-decoration:none;
+	color:black;
+}
+
+.tovar_catalog .product {
+	width: 95%;
+	display: flex;
+	justify-content: space-around;
+	box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.3);
+	margin: 5px auto;
+	padding: 5px;
+}
+.tovar_catalog .product .product_descript {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 15px;
+	text-align:justify;
+}
+
+
+.tovar_catalog .product>div {
+	text-align: center;
+	padding:0;
+}
+
+.tovar_catalog .product>div:first-child {
+	min-width:150px;
+	width:25%;
+}
+
+.tovar_catalog .product img {
+	display:block;
+	height: 200px;
+	width:auto;
+}
+.tovar_catalog .price_basket {
+	display: flex;
+	justify-content: space-around;
+}
+
+.tovar_catalog .product:hover
+{
+		box-shadow: 0px 0px 20px -5px rgba(108,200,176,0.75);
+		background-color:#C8D8DF;
+}
+
+.tovar_catalog input {
+	padding:15px;
+    background: #fb4d01;
+    border: none;
+    color: #fff;
+}
+
+.tovar_catalog input:active {
+	padding:15px;
+    background: #22E4ED;
+    border: none;
+    color: #000;
+}

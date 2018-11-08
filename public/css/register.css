@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+.register
+
+.register form 
+{
+  font-family: 'Palatino Linotype', serif;
+  max-width: 800px;
+  padding: 0px 30px;
+  margin: auto;
+  text-align:left; /* Расположение текста внутри элемента*/
+}
+
+.register form input:required 
+{
+	background-color: lightyellow;
+}
+
+
+
+.register form h1 
+{
+  margin-bottom: 0px;
+}
+
+.register form p 
+{
+  margin-top: 0px;
+}
+
+.register form fieldset 
+{
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.register form legend 
+{
+  padding: 0px 3px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.register form label 
+{
+  width: 150px;
+  display: inline-block;
+  margin: 6px;
+  text-align:justify; /* Расположение текста внутри элемента*/
+}
+
+.register form em 
+{
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+
+.register form input:focus 
+{
+  background: #eaeaea;
+}
+
+.register form input 
+{
+  width: 249px;
+}
+
+.register  textarea 
+{
+  width: calc(100% - 180px);
+	
+}
+
+.register form textarea 
+{
+  height: 100px;
+}
+
+.register form select 
+{
+  width: 254px;
+  
+}
+
+.register form input[type=checkbox] 
+{
+  width: 30px;
+
+}
+
+.register form input[type=submit] 
+{
+  width: 170px;
+  padding: 10px;
+}

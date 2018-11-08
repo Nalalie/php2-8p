@@ -1,0 +1,22 @@
+AddDefaultCharset UTF-8
+DirectoryIndex index.php index.html
+
+#Включаем работу механизма преобразования
+RewriteEngine on
+
+# {REQUEST_FILENAME} Полный путь вфайловой системе сервера кфайлу или скрипту соответствующим этому запросу.
+# [NC] - Регистр не имеет значения, т.е., нет различий между 'A-Z' и'a-z'
+# OR (либо следующее условие) Используйте для комбинирования условий в правилах OR вместо AND
+# -f СравниваемаяСтрока считается путем, проверяется существование этого пути иточто этот путь является обычным файлом
+RewriteCond %{REQUEST_FILENAME} -f [NC,OR]
+# -d СравниваемаяСтрока считается путем, проверяется существование этого пути и то что этот путь является каталогом.
+RewriteCond %{REQUEST_FILENAME} -d [NC]
+RewriteRule .* - [L]
+
+
+#site.ru/cat/dev/, сервер через .htaccess будет обрабатывать команду — site.ru?id=cat&p=dev 
+#RewriteRule ^([a-z]+)/([a-z]+)/$ ?id=$1&p=$2 [L]
+# site.ru/primer/, сервер через .htaccess будет обрабатывать команду — site.ru?id_news=primer
+#RewriteRule ^([a-z]+)/$ ?id_news=$1 [L]
+
+RewriteRule ^(.*)/$ ?path=$1 [QSA,L]
